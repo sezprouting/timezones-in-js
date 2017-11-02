@@ -1,14 +1,69 @@
+<!DOCTYPE html>
 <HTML>
     <HEAD>
-
+        <meta charset="UTF-8">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
+        <!-- Latest compiled and minified CSS --> 
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Optional theme <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+        <!-- Latest compiled and minified JavaScript --> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </HEAD>
     <BODY>
         <DIV class="main-container">
-            <div class="input-container">
-                <p>Hello world</p>
-            </div>
-            <div class="output-container">
-                <p>Kia ora whanau</p>
+            <div class="row">
+                <div class="input-container col-md-6 col-sm-12" style="background-color:aliceblue">
+                    <div class="player-zone-container col-md-12">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for"player-zone-selector">Game starts:</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <select id="player-zone-selector">
+                                    <option value="">-- Select a timezone --</option>
+                                    <option value="New Zealand Time">NZT</option>
+                                    <option value="Australia Time">AUST</option>
+                                    <option value="South Africa Time">SAT</option>
+                                    <option value="United Kingdom Time">UKT</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="player-zone-details" class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-4 col-sm-6">
+                                    <label for="player-zone-date" class="col-sm-12">Date:</label>
+                                    <input type="date" id="player-zone-date" />
+                                </div>
+                                <div class="col-md-4 col-sm-6">
+                                    <label for="player-zone-time" class="col-sm-12">Time:</label>
+                                    <input type="time" id="player-zone-time" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for"observer-zone-selector">I'm watching from:</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <select id="observer-zone-selector">
+                                    <option value="">-- Select a timezone --</option>
+                                    <option value="New Zealand Time">NZT</option>
+                                    <option value="Australia Time">AUST</option>
+                                    <option value="South Africa Time">SAT</option>
+                                    <option value="United Kingdom Time">UKT</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="output-container col-md-6 col-sm-12" style="background-color:blanchedalmond;">
+                    <div id="output-text-container" class="row">
+                        <div id="output-datetime col-sm-12">
+                            <div id="output-time-text" class="output-time-text">2:01pm</div>
+                            <div id="output-date-text" class="output-date-text">Thursday 12 November 2031</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </DIV>
     </BODY>
