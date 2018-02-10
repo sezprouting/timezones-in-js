@@ -1,0 +1,19 @@
+div .input-container {
+    background-color: antiquewhite;
+}
+
+div .output-container {
+    background-color: aliceblue;
+}
+
+div {
+    border: dashed 1px grey;
+}
+
+.observer-container {
+    border: solid 2px red;
+}
+
+.player-container {
+    border: solid 2px green;
+}
