@@ -4,92 +4,72 @@
         <meta charset="UTF-8">
         <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.4.min.js"></script>
         <!-- Latest compiled and minified CSS --> 
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!-- Optional theme <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
         <!-- Latest compiled and minified JavaScript --> 
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./Styles/style.css">
     </HEAD>
     <BODY>
-        <DIV class="main-container">
-            <section class="input-section col-md-6 col-sm-12">
-                <div class="row" style="background-color:darkgrey">
-                    <div id="observer-container">
-                        <header class="col-sm-12">
-                            About you
-                        </header>
-                        <div class="col-sm-12">
-                            <label for"observer-zone-selector">What's your timezone?</label>
+        <div id="main-container">
+            <div class="row">
+                <div class="input-container col-md-6 col-sm-12">
+                    <div class="observer-container">
+                        <div class="heading"><h2>Your date and time</h2></div>
+                        <div>
+                            <label for="observer-zone-selector">Where are you watching from?</label>
                         </div>
-                        <div class="col-sm-12">
+                        <div>
                             <select id="observer-zone-selector">
-                                <option value="">-- Select a timezone --</option>
-                                <option value="New Zealand Time">NZT</option>
-                                <option value="Australia Time">AUST</option>
-                                <option value="South Africa Time">SAT</option>
-                                <option value="United Kingdom Time">UKT</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="row" style="background-color:aquamarine">
-                    <div id="player-container">
-                        <div class="col-sm-12">
-                            <header class="col-sm-12">
-                                About the game
-                            </header>
-                            <div class="col-sm-12">
-                                <label for"player-zone-selector">Where is the game?</label>
-                            </div>
-                            <div class="col-sm-12">
-                                <select id="player-zone-selector">
                                     <option value="">-- Select a timezone --</option>
                                     <option value="New Zealand Time">NZT</option>
                                     <option value="Australia Time">AUST</option>
                                     <option value="South Africa Time">SAT</option>
                                     <option value="United Kingdom Time">UKT</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="col-sm-12">
-                                    <label for="player-zone-date" class="col-sm-12">Start date:</label>
-                                </div>
-                                <div class="col-sm-12">
-                                    <input type="date" id="player-zone-date" />
-                                </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="col-sm-12">
-                                    <label for="player-zone-time" class="col-sm-12">Start time:</label>
-                                </div>
-                                <div class="col-sm-12">
-                                    <input type="time" id="player-zone-time" />
-                                </div>
-                            </div>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="player-container">
+                        <div class="heading"><h2>Game date and time</h2></div>
+                        <div>
+                            <label for="player-zone-selector">Where is the game being played?</label>
+                        </div>
+                        <div>
+                            <select id="player-zone-selector">
+                                    <option value="">-- Select a timezone --</option>
+                                    <option value="New Zealand Time">NZT</option>
+                                    <option value="Australia Time">AUST</option>
+                                    <option value="South Africa Time">SAT</option>
+                                    <option value="United Kingdom Time">UKT</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="player-zone-date">Start date:</label>
+                        </div>
+                        <div>
+                            <input type="date" id="player-zone-date" />
+                        </div>
+                        <div>
+                            <label for="player-zone-time">Start time:</label>
+                        </div>
+                        <div>
+                            <input type="time" id="player-zone-time" />
+                        </div>
+                        <div>
+                            <input type="submit" value="Get local start time" />
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="output-container col-md-6 col-sm-12  d-flex align-items-center">
                     <div class="col-sm-12">
-                        <input type="submit" value="Get my start time" />
-                    </div>
-                </div>          
-            </section>
-
-            <section class="output-section col-md-6 col-sm-12">
-                <div class="row" style="background-color:blanchedalmond">
-                    <div id="output-container">
-                        <header class="col-sm-12">
-                            The game will start for you:
-                        </header>
-                        <div class="col-sm-12">
-                            <div id="output-time-text" class="output-time-text">2:01pm</div>
+                        <div class="heading">
+                            <h2>When the game starts for you:</h2>
                         </div>
-                        <div class="col-sm-12">
-                            <div id="output-date-text" class="output-date-text">Thursday 12 November 2031</div>
-                        </div>
+                        <div>2:01pm</div>
+                        <div>Thursday 12 November 2031</div>
                     </div>
                 </div>
-            </section>
-        </DIV>
+            </div>
+        </div>
     </BODY>
 </HTML>
