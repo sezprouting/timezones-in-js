@@ -12,64 +12,70 @@
     </HEAD>
     <BODY>
         <div id="main-container">
-            <div class="row">
-                <div class="input-container col-md-6 col-sm-12">
-                    <div class="observer-container">
-                        <div class="heading"><h2>Your date and time</h2></div>
-                        <div>
-                            <label for="observer-zone-selector">Where are you watching from?</label>
+            <form>
+                <div class="row">
+                    <div class="input-container col-md-6 col-sm-12">
+                        <div class="observer-container">
+                            <div class="heading"><h2>Your date and time</h2></div>
+                            <div>
+                                <label for="observer-zone-selector">Where are you watching from?</label>
+                            </div>
+                            <div>
+                                <select id="observer-zone-selector" required>
+                                        <option value="">-- Select a timezone --</option>
+                                        <option value="New Zealand Time">NZT</option>
+                                        <option value="Australia Time">AUST</option>
+                                        <option value="South Africa Time">SAT</option>
+                                        <option value="United Kingdom Time">UKT</option>
+                                </select>
+                            </div>
                         </div>
-                        <div>
-                            <select id="observer-zone-selector">
-                                    <option value="">-- Select a timezone --</option>
-                                    <option value="New Zealand Time">NZT</option>
-                                    <option value="Australia Time">AUST</option>
-                                    <option value="South Africa Time">SAT</option>
-                                    <option value="United Kingdom Time">UKT</option>
-                            </select>
+                        <div class="player-container">
+                            <div class="heading"><h2>Game date and time</h2></div>
+                            <div>
+                                <label for="player-zone-selector">Where is the game being played?</label>
+                            </div>
+                            <div>
+                                <select id="player-zone-selector" required>
+                                        <option value="">-- Select a timezone --</option>
+                                        <option value="New Zealand Time">NZT</option>
+                                        <option value="Australia Time">AUST</option>
+                                        <option value="South Africa Time">SAT</option>
+                                        <option value="United Kingdom Time">UKT</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="player-start-date">Start date:</label>
+                            </div>
+                            <div>
+                                <input type="date" id="player-start-date" required />
+                            </div>
+                            <div>
+                                <label for="player-start-time">Start time:</label>
+                            </div>
+                            <div>
+                                <input type="time" id="player-start-time" required />
+                            </div>
+                        </div>
+                        <div class="submit-container">
+                            <div>
+                                <button type="button" id="submitButton">Get local start time</button>
+                            </div>
                         </div>
                     </div>
-                    <div class="player-container">
-                        <div class="heading"><h2>Game date and time</h2></div>
-                        <div>
-                            <label for="player-zone-selector">Where is the game being played?</label>
-                        </div>
-                        <div>
-                            <select id="player-zone-selector">
-                                    <option value="">-- Select a timezone --</option>
-                                    <option value="New Zealand Time">NZT</option>
-                                    <option value="Australia Time">AUST</option>
-                                    <option value="South Africa Time">SAT</option>
-                                    <option value="United Kingdom Time">UKT</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="player-zone-date">Start date:</label>
-                        </div>
-                        <div>
-                            <input type="date" id="player-zone-date" />
-                        </div>
-                        <div>
-                            <label for="player-zone-time">Start time:</label>
-                        </div>
-                        <div>
-                            <input type="time" id="player-zone-time" />
-                        </div>
-                        <div>
-                            <input type="submit" value="Get local start time" />
+                    <div class="output-container col-md-6 col-sm-12  d-flex align-items-center">
+                        <div class="col-sm-12">
+                            <div class="heading">
+                                <h2>When the game starts for you:</h2>
+                            </div>
+                            <div id="observer-start-date">Date:</div>
+                            <div id="observer-start-time">Time:</div>
                         </div>
                     </div>
                 </div>
-                <div class="output-container col-md-6 col-sm-12  d-flex align-items-center">
-                    <div class="col-sm-12">
-                        <div class="heading">
-                            <h2>When the game starts for you:</h2>
-                        </div>
-                        <div>2:01pm</div>
-                        <div>Thursday 12 November 2031</div>
-                    </div>
-                </div>
-            </div>
+            </form>
         </div>
+
+        <script src="scripts/calculateTime.js"></script>
     </BODY>
 </HTML>
