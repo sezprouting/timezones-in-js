@@ -11,12 +11,34 @@
     </HEAD>
     <BODY>
         <DIV class="main-container">
-            <div class="row">
-                <div class="input-container col-md-6 col-sm-12" style="background-color:aliceblue">
-                    <div class="player-zone-container col-md-12">
-                        <div class="row">
+            <section class="input-section col-md-6 col-sm-12">
+                <div class="row" style="background-color:darkgrey">
+                    <div id="observer-container">
+                        <header class="col-sm-12">
+                            About you
+                        </header>
+                        <div class="col-sm-12">
+                            <label for"observer-zone-selector">What's your timezone?</label>
+                        </div>
+                        <div class="col-sm-12">
+                            <select id="observer-zone-selector">
+                                <option value="">-- Select a timezone --</option>
+                                <option value="New Zealand Time">NZT</option>
+                                <option value="Australia Time">AUST</option>
+                                <option value="South Africa Time">SAT</option>
+                                <option value="United Kingdom Time">UKT</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" style="background-color:aquamarine">
+                    <div id="player-container">
+                        <div class="col-sm-12">
+                            <header class="col-sm-12">
+                                About the game
+                            </header>
                             <div class="col-sm-12">
-                                <label for"player-zone-selector">Game starts:</label>
+                                <label for"player-zone-selector">Where is the game?</label>
                             </div>
                             <div class="col-sm-12">
                                 <select id="player-zone-selector">
@@ -27,44 +49,47 @@
                                     <option value="United Kingdom Time">UKT</option>
                                 </select>
                             </div>
-                        </div>
-                        <div id="player-zone-details" class="row">
-                            <div class="col-md-12">
-                                <div class="col-md-4 col-sm-6">
-                                    <label for="player-zone-date" class="col-sm-12">Date:</label>
+                            <div class="col-sm-12">
+                                <div class="col-sm-12">
+                                    <label for="player-zone-date" class="col-sm-12">Start date:</label>
+                                </div>
+                                <div class="col-sm-12">
                                     <input type="date" id="player-zone-date" />
                                 </div>
-                                <div class="col-md-4 col-sm-6">
-                                    <label for="player-zone-time" class="col-sm-12">Time:</label>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="col-sm-12">
+                                    <label for="player-zone-time" class="col-sm-12">Start time:</label>
+                                </div>
+                                <div class="col-sm-12">
                                     <input type="time" id="player-zone-time" />
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <label for"observer-zone-selector">I'm watching from:</label>
-                            </div>
-                            <div class="col-sm-12">
-                                <select id="observer-zone-selector">
-                                    <option value="">-- Select a timezone --</option>
-                                    <option value="New Zealand Time">NZT</option>
-                                    <option value="Australia Time">AUST</option>
-                                    <option value="South Africa Time">SAT</option>
-                                    <option value="United Kingdom Time">UKT</option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="output-container col-md-6 col-sm-12" style="background-color:blanchedalmond;">
-                    <div id="output-text-container" class="row">
-                        <div id="output-datetime col-sm-12">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <input type="submit" value="Get my start time" />
+                    </div>
+                </div>          
+            </section>
+
+            <section class="output-section col-md-6 col-sm-12">
+                <div class="row" style="background-color:blanchedalmond">
+                    <div id="output-container">
+                        <header class="col-sm-12">
+                            The game will start for you:
+                        </header>
+                        <div class="col-sm-12">
                             <div id="output-time-text" class="output-time-text">2:01pm</div>
+                        </div>
+                        <div class="col-sm-12">
                             <div id="output-date-text" class="output-date-text">Thursday 12 November 2031</div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </DIV>
     </BODY>
 </HTML>
